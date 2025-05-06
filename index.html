@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KU ECE HELPER</title>
+  <title>ECE Helper - KU</title>
   <style>
     body {
       font-family: Consolas, monospace;
@@ -165,9 +165,9 @@
         a.textContent = `Batch ${batch}`;
 
         if (linkData) {
-          a.href = `https://drive.google.com/file/d/${linkData.id}/view`;
-          a.className = 'view';
-          a.target = '_blank';
+          a.href = `https://drive.google.com/uc?export=download&id=${linkData.id}`;
+          a.className = 'download';
+          a.download = '';  // Trigger the download
         } else {
           a.href = "#";
           a.className = 'not-available';
